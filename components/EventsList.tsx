@@ -22,7 +22,7 @@ const EventsList = (props: Props) => {
 	// sort,, hide
 	const filteredEvents = eventStore.events
 		.filter((event) => event.date >= currentDate)
-		.sort((a, b) => b.date.getHours() - a.date.getHours());
+		.sort((a, b) => a.date.getDate() - b.date.getDate());
 
 	return (
 		<SafeAreaView>
